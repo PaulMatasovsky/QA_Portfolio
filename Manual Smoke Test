@@ -1,0 +1,91 @@
+A comprehensive smoke checklist should cover the major risk areas, not every possible edge case. 
+The goal is to show: core access works, primary workflows work, validation is present, navigation is sane, data persists, 
+  and nothing obvious is broken across key user paths.
+
+Smoke Test Checklist
+Test Summary
+Application Under Test: [Insert application name]
+URL: [Insert URL]
+Build/Version: [Insert build or version, if available]
+Test Date: [Insert date]
+Tester: [Insert name]
+Environment: [Browser, OS, device]
+Scope: Core application access, authentication, navigation, primary workflow, validation, data handling, session behavior, 
+  UI sanity, browser sanity, and basic accessibility checks.
+Overall Result: [Pass / Fail / Blocked]
+Blockers Found: [Yes / No]
+Notes: [Add brief overall notes here]
+
+Purpose
+This smoke checklist is intended to confirm that the application build is stable enough for further testing. 
+It focuses on core functionality and major risk areas rather than deep edge-case or full regression coverage.
+
+Exit Guidance
+If all critical checks pass, proceed to deeper functional, exploratory, or regression testing.
+If one or more critical checks fail, pause further testing and log defects before continuing.
+
+Status Legend
+Pass — Check completed successfully.
+Fail — Check completed and did not meet expected result.
+Blocked — Check could not be completed due to another issue.
+Not Run — Check has not yet been executed.
+
+Smoke Test Table
+| ID      | Category            | Check                                                    | Status  | Notes |
+| ------- | ------------------- | -------------------------------------------------------- | ------- | ----- |
+| SMK-001 | Launch              | App loads without errors                                 | Not Run |       |
+| SMK-002 | Launch              | Landing page renders correctly                           | Not Run |       |
+| SMK-003 | Launch              | Core navigation is visible                               | Not Run |       |
+| SMK-004 | Launch              | Page layout is not broken on load                        | Not Run |       |
+| SMK-005 | Authentication      | Login page opens successfully                            | Not Run |       |
+| SMK-006 | Authentication      | Valid credentials allow login                            | Not Run |       |
+| SMK-007 | Authentication      | Invalid credentials are rejected                         | Not Run |       |
+| SMK-008 | Authentication      | Blank username is rejected                               | Not Run |       |
+| SMK-009 | Authentication      | Blank password is rejected                               | Not Run |       |
+| SMK-010 | Authentication      | Logout ends the session                                  | Not Run |       |
+| SMK-011 | Authentication      | Protected page is not accessible after logout            | Not Run |       |
+| SMK-012 | Navigation          | Main navigation links work                               | Not Run |       |
+| SMK-013 | Navigation          | Back button does not break the app                       | Not Run |       |
+| SMK-014 | Navigation          | Refresh does not break the current page                  | Not Run |       |
+| SMK-015 | Core Workflow       | Primary user action can be completed                     | Not Run |       |
+| SMK-016 | Core Workflow       | New record or item can be created                        | Not Run |       |
+| SMK-017 | Core Workflow       | Existing record or item can be edited                    | Not Run |       |
+| SMK-018 | Core Workflow       | Existing record or item can be deleted                   | Not Run |       |
+| SMK-019 | Core Workflow       | Cancel action leaves data unchanged                      | Not Run |       |
+| SMK-020 | Core Workflow       | Saved data persists after refresh                        | Not Run |       |
+| SMK-021 | Form Validation     | Required fields are enforced                             | Not Run |       |
+| SMK-022 | Form Validation     | Invalid email or format input is rejected                | Not Run |       |
+| SMK-023 | Form Validation     | Spaces-only input is rejected                            | Not Run |       |
+| SMK-024 | Form Validation     | Validation clears after correction                       | Not Run |       |
+| SMK-025 | Form Validation     | Maximum length is handled correctly                      | Not Run |       |
+| SMK-026 | Data Handling       | Entered data displays correctly after save               | Not Run |       |
+| SMK-027 | Data Handling       | Duplicate submission is prevented                        | Not Run |       |
+| SMK-028 | Data Handling       | Search, sort, or filter works if core to app             | Not Run |       |
+| SMK-029 | Data Handling       | No corrupted values appear in lists or details           | Not Run |       |
+| SMK-030 | Session Behavior    | Session stays active during normal use                   | Not Run |       |
+| SMK-031 | Session Behavior    | Browser back button does not restore access after logout | Not Run |       |
+| SMK-032 | Session Behavior    | Session timeout behaves reasonably, if supported         | Not Run |       |
+| SMK-033 | UI Sanity           | Text is readable and not cut off                         | Not Run |       |
+| SMK-034 | UI Sanity           | Buttons are visible and usable                           | Not Run |       |
+| SMK-035 | UI Sanity           | Inputs are aligned and usable                            | Not Run |       |
+| SMK-036 | UI Sanity           | No major layout overlap exists                           | Not Run |       |
+| SMK-037 | UI Sanity           | Status and error messages are visible                    | Not Run |       |
+| SMK-038 | Browser Sanity      | Application works in primary browser                     | Not Run |       |
+| SMK-039 | Browser Sanity      | Main flow still works after refresh	User is in app       | Not Run |       |
+| SMK-040 | Basic Accessibility | Form labels are present                                  | Not Run |       |
+| SMK-041 | Basic Accessibility | Keyboard focus is visible                                | Not Run |       |
+| SMK-042 | Basic Accessibility | Tab order is reasonable                                  | Not Run |       |
+| SMK-043 | Basic Accessibility | Important text remains readable                          | Not Run |       |
+| SMK-044 | Basic Accessibility | Errors are not color-only cues                           | Not Run |       |
+
+Test Execution Summary
+Total Checks: 44
+Passed: [Insert number]
+Failed: [Insert number]
+Blocked: [Insert number]
+Not Run: [Insert number]
+Critical Failures: [List IDs, if any]
+Recommendation: [Proceed / Proceed with caution / Do not proceed]
+
+
+
